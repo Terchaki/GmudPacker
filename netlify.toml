@@ -1,0 +1,16 @@
+# Netlify configuration for Angular SPA
+
+[build]
+base = "gmudPacker"
+command = "npm install && npm run build"
+publish = "dist/gmudPacker"
+
+[build.environment]
+NODE_VERSION = "20"
+
+# Redirect all requests to index.html for SPA routing
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
