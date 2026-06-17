@@ -3,7 +3,7 @@
 [build]
 base = "gmudPacker"
 command = "npm install && npm run build"
-publish = "dist/gmudPacker"
+publish = "dist/gmudPacker/browser"
 
 [build.environment]
 NODE_VERSION = "20"
