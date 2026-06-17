@@ -1,2 +1,30 @@
-<p>Welcome to gmudPacker!</p>
-<router-outlet />
+<div class="app-container">
+  <nav class="navbar">
+    <div class="nav-brand">
+      <h1>{{ title() }}</h1>
+    </div>
+    <ul class="nav-links">
+      <li>
+        <a routerLink="/transform" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Transformar
+        </a>
+      </li>
+      <li>
+        <a routerLink="/tutorial" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          Tutorial
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <router-outlet />
+  </main>
+
+  <footer class="app-footer">
+    <span>&copy; {{ currentYear }} - </span>Desenvolvido por
+    <a href="https://www.linkedin.com/in/lucas-henrique-sousa-mendes/" target="_blank" rel="noreferrer">
+      Lucas Henrique
+    </a>
+  </footer>
+</div>

@@ -1,0 +1,81 @@
+.tutorial-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tutorial-section {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    border-bottom: 3px solid #007bff;
+    padding-bottom: 1rem;
+  }
+}
+
+.tutorial-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tutorial-article {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 6px;
+  border-left: 4px solid #007bff;
+  animation: fadeIn 0.3s ease;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+
+  h4 {
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+  }
+
+  ol, ul {
+    color: #666;
+    line-height: 1.8;
+    margin: 1rem 0;
+    padding-left: 2rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: #333;
+    }
+  }
+}
