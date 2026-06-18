@@ -1,50 +1,80 @@
 <div class="tutorial-container">
   <div class="tutorial-section">
-    <h2>Tutorial de Uso - GMUD Packer</h2>
+    <h2>Tutorial de Uso - Gmud Packer</h2>
 
     <div class="tutorial-content">
-      <article class="tutorial-article">
-        <h3>1. Como Usar o Transformador</h3>
-        <p>O gmudPacker foi desenvolvido para facilitar a conversão de arquivos do pipeline de build em estruturas organizadas para empacotamento GMUD.</p>
-
-        <h4>Passo a Passo:</h4>
-        <ol>
-          <li>Acesse a aba <strong>"Transformar"</strong> na navegação superior</li>
-          <li>Cole o conteúdo do arquivo log do pipeline na área de texto</li>
-          <li>Clique no botão <strong>"Gerar"</strong> para processar o arquivo</li>
-          <li>Aguarde o processamento (a barra de progresso indicará o status)</li>
-          <li>Após a conclusão, o resultado aparecerá na área abaixo</li>
-          <li>Clique em <strong>"Copiar"</strong> para copiar o resultado processado</li>
-        </ol>
+      <!-- STEP 1 -->
+      <article class="tutorial-step">
+        <div class="step-header">
+          <h3>Passo 1: Obtenha o Log do Build</h3>
+          <span class="step-number">1</span>
+        </div>
+        <div class="step-body">
+          <div class="step-description">
+            <p>Após o build do pipeline estiver concluído, clique em <strong>"npm run build"</strong> e depois em
+              <strong>"View raw log"</strong> conforme a imagem para acessar o log completo do build.
+            </p>
+          </div>
+          <div class="step-image">
+            <img src="images/tutorial_step_1.png" alt="Passo 1: Obtendo o log do build" />
+          </div>
+        </div>
       </article>
 
-      <article class="tutorial-article">
-        <h3>2. Formato de Entrada Esperado</h3>
-        <p>O arquivo do pipeline deve conter os arquivos minificados do build em um formato estruturado. O transformador lerá este conteúdo e reorganizará em uma estrutura adequada para o pacote GMUD.</p>
+      <!-- STEP 2 -->
+      <article class="tutorial-step">
+        <div class="step-header">
+          <h3>Passo 2: Copie o Conteúdo do Log</h3>
+          <span class="step-number">2</span>
+        </div>
+        <div class="step-body">
+          <div class="step-description">
+            <p>Será aberta uma nova aba no navegador contendo todo o log do build. Nesta tela, basta selecionar todo o
+              conteúdo (<strong>Ctrl+A</strong>) e copiar o texto para sua área de transferência.</p>
+          </div>
+          <div class="step-image">
+            <img src="images/tutorial_step_2.png" alt="Passo 2: Copiando o log do build" />
+          </div>
+        </div>
       </article>
 
-      <article class="tutorial-article">
-        <h3>3. Formato de Saída</h3>
-        <p>O resultado será uma listagem estruturada e organizada dos arquivos, pronta para ser utilizada na geração do pacote GMUD. Você poderá copiar diretamente para usar em seu processo de empacotamento.</p>
+      <!-- STEP 3 -->
+      <article class="tutorial-step">
+        <div class="step-header">
+          <h3>Passo 3: Cole e Processe no Transformador</h3>
+          <span class="step-number">3</span>
+        </div>
+        <div class="step-body">
+          <div class="step-description">
+            <p>Com todo o log copiado, acesse a aba
+              <strong><a routerLink="/transform" target="_blank">Transformar</a></strong>, cole o
+              conteúdo na área de texto e clique em <strong>"Gerar"</strong>. A estrutura de arquivos para o pacote será
+              gerada automaticamente e disponível para copiar ou baixar em formato .txt.
+            </p>
+          </div>
+          <div class="step-image">
+            <img src="images/tutorial_step_3.png" alt="Passo 3: Processando no transformador" />
+          </div>
+        </div>
       </article>
 
+      <!-- INFORMAÇÕES ADICIONAIS -->
       <article class="tutorial-article">
-        <h3>4. Dicas Úteis</h3>
+        <h3>Dicas Úteis</h3>
         <ul>
           <li>Sempre verifique se o conteúdo foi colado completamente antes de processar</li>
           <li>Use a função "Limpar" para resetar a tela e processar um novo arquivo</li>
-          <li>O progresso é uma estimativa visual do processamento em andamento</li>
-          <li>O resultado pode ser copiado em um clique</li>
+          <li>O resultado pode ser copiado ou baixado em um clique</li>
         </ul>
       </article>
 
       <article class="tutorial-article">
-        <h3>5. Suporte e Dúvidas</h3>
-        <p>Em caso de dúvidas ou problemas, verifique se:</p>
+        <h3>Suporte e Dúvidas</h3>
+        <p>Em caso de problemas, verifique se:</p>
         <ul>
           <li>O arquivo foi copiado completamente do pipeline</li>
           <li>O formato do arquivo está correto</li>
-          <li>Não há caracteres especiais ou codificação diferente</li>
+          <li>Não há codificação diferente</li>
         </ul>
       </article>
     </div>
