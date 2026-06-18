@@ -1,59 +1,96 @@
-# GmudPacker
+# Gmud Packer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.6.
+Aplicação Angular para transformar logs de build em uma estrutura de arquivos organizada para empacotamento GMUD.
 
-## Development server
+## Sobre o projeto
 
-To start a local development server, run:
+O Gmud Packer foi criado para simplificar o fluxo de quem precisa:
 
-```bash
-ng serve
-```
+1. Copiar o log bruto do pipeline
+2. Colar no transformador
+3. Gerar uma estrutura pronta para copiar ou baixar em `.txt`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Atualmente o projeto possui duas telas principais:
 
-## Code scaffolding
+1. `Transform`: processamento do log e geração da estrutura
+2. `Tutorial`: passo a passo visual de uso
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## Deploy
 
-```bash
-ng generate component component-name
-```
+1. Url: https://gmudpacker.netlify.app/
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Tecnologias
 
-```bash
-ng generate --help
-```
+1. Angular 20
+2. TypeScript
+3. SCSS
 
-## Building
+## Pré-requisitos
 
-To build the project run:
+1. Node.js 20+
+2. npm 10+
 
-```bash
-ng build
-```
+## Como executar localmente
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. Instale as dependências:
 
 ```bash
-ng test
+npm install
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+2. Execute o projeto em modo de desenvolvimento:
 
 ```bash
-ng e2e
+npm start
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+3. Acesse no navegador:
 
-## Additional Resources
+```text
+http://localhost:4200
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Scripts disponíveis
+
+1. Iniciar aplicação:
+
+```bash
+npm start
+```
+
+2. Gerar build de produção:
+
+```bash
+npm run build
+```
+
+3. Build em modo watch:
+
+```bash
+npm run watch
+```
+
+4. Executar testes:
+
+```bash
+npm test
+```
+
+## Estrutura do fluxo
+
+1. Obtenha o log no pipeline (`npm run build` -> `View raw log`)
+2. Copie todo o conteúdo do log
+3. Cole no transformador
+4. Clique em `Gerar`
+5. Copie o resultado ou faça download do `.txt`
+
+## Melhorias futuras
+
+1. Validação mais robusta de formatos de log
+2. Histórico de transformações
+3. Exportação em múltiplos formatos
+
+## Autor
+
+1. Nome: Lucas Henrique Sousa Mendes
+2. Contato: [LinkedIn](https://www.linkedin.com/in/lucas-henrique-sousa-mendes/)
