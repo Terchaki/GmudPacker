@@ -16,7 +16,11 @@
             </p>
           </div>
           <div class="step-image">
-            <img src="images/tutorial_step_1.png" alt="Passo 1: Obtendo o log do build" />
+            <img
+              src="images/tutorial_step_1.png"
+              alt="Passo 1: Obtendo o log do build"
+              (click)="openImage('images/tutorial_step_1.png', 'Passo 1: Obtendo o log do build')"
+            />
           </div>
         </div>
       </article>
@@ -33,7 +37,11 @@
               conteúdo (<strong>Ctrl+A</strong>) e copiar o texto para sua área de transferência.</p>
           </div>
           <div class="step-image">
-            <img src="images/tutorial_step_2.png" alt="Passo 2: Copiando o log do build" />
+            <img
+              src="images/tutorial_step_2.png"
+              alt="Passo 2: Copiando o log do build"
+              (click)="openImage('images/tutorial_step_2.png', 'Passo 2: Copiando o log do build')"
+            />
           </div>
         </div>
       </article>
@@ -53,7 +61,11 @@
             </p>
           </div>
           <div class="step-image">
-            <img src="images/tutorial_step_3.png" alt="Passo 3: Processando no transformador" />
+            <img
+              src="images/tutorial_step_3.png"
+              alt="Passo 3: Processando no transformador"
+              (click)="openImage('images/tutorial_step_3.png', 'Passo 3: Processando no transformador')"
+            />
           </div>
         </div>
       </article>
@@ -79,4 +91,16 @@
       </article>
     </div>
   </div>
+</div>
+
+<div class="image-lightbox" *ngIf="selectedImage" (click)="closeImage()">
+  <button class="lightbox-close" type="button" (click)="closeImage(); $event.stopPropagation()" aria-label="Fechar imagem">
+    x
+  </button>
+  <img
+    class="lightbox-image"
+    [src]="selectedImage.src"
+    [alt]="selectedImage.alt"
+    (click)="$event.stopPropagation()"
+  />
 </div>
