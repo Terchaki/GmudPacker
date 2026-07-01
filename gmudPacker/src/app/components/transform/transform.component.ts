@@ -76,10 +76,16 @@ export class TransformComponent {
   }
 
   handleCopy(): void {
-    navigator.clipboard.writeText(this.resultText()).then(() => {
+    const jiraSafeContent = this.buildJiraSafeContent(this.resultText());
+
+    navigator.clipboard.writeText(jiraSafeContent).then(() => {
       this.copySuccess.set(true);
       setTimeout(() => this.copySuccess.set(false), 2000);
     });
+  }
+
+  private buildJiraSafeContent(content: string): string {
+    return `\`\`\`text\n${content}\n\`\`\``;
   }
 
   handleDownloadTxt(): void {
